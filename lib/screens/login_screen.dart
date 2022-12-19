@@ -10,9 +10,23 @@ class LoginScreen extends StatelessWidget {
           title: const Text("Login"),
         ),
         body: Center(
-            child: ElevatedButton(
-          onPressed: () {},
-          child: const Text("Login"),
-        )));
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/profile');
+                },
+                child: const Text("Navigator to Login"),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                child: const Text("Pop Context"),
+              ),
+            ],
+          ),
+        ));
   }
 }
