@@ -22,7 +22,7 @@ class LoginScreen extends StatelessWidget {
               ),
               ElevatedButton(
                 onPressed: () {
-                  Navigator.pop(context);
+                  navigate.pop();
                 },
                 child: const Text("Pop Context"),
               ),

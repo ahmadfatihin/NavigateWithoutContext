@@ -6,6 +6,7 @@ import 'package:navigatewithoutcontext/service_locator.dart';
 import 'package:navigatewithoutcontext/utils/navigation_util.dart';
 
 void main() async {
+  // add Setup Locator
   setupLocator();
   runApp(const MyApp());
 }
@@ -16,6 +17,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      // add Navigation Key
       navigatorKey: locator<NavigationUtils>().navigatorKey,
       routes: {
         '/': (context) => const HomeScreen(),

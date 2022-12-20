@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:navigatewithoutcontext/utils/navigation_util.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
@@ -15,8 +16,7 @@ class ProfileScreen extends StatelessWidget {
           padding: const EdgeInsets.all(20.0),
           child: ElevatedButton(
             onPressed: () {
-              Navigator.pushNamedAndRemoveUntil(
-                  context, '/', (Route<dynamic> route) => false);
+              navigate.pushToRemoveUntil('/');
             },
             child: const Text("Delete Route"),
           ),
