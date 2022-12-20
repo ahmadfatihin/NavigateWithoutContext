@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:navigatewithoutcontext/utils/navigation_util.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -15,7 +16,7 @@ class LoginScreen extends StatelessWidget {
             children: [
               ElevatedButton(
                 onPressed: () {
-                  Navigator.pushNamed(context, '/profile');
+                  navigate.pushTo('/profile');
                 },
                 child: const Text("Navigator to Profile"),
               ),
